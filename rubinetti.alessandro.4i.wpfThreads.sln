@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rubinetti.alessandro.4i.wpfThreads", "rubinetti.alessandro.4i.wpfThreads\rubinetti.alessandro.4i.wpfThreads.csproj", "{DB986D8C-338A-4AA2-8473-40B1F872B6EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB986D8C-338A-4AA2-8473-40B1F872B6EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB986D8C-338A-4AA2-8473-40B1F872B6EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB986D8C-338A-4AA2-8473-40B1F872B6EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB986D8C-338A-4AA2-8473-40B1F872B6EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {173DDB7F-08AB-49CD-AF9C-BAD7450410D6}
+	EndGlobalSection
+EndGlobal
