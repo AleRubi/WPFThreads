@@ -22,9 +22,12 @@ namespace rubinetti.alessandro._4i.wpfThreads
     /// </summary>
     public partial class MainWindow : Window
     {
-        const int GIRI = 1000;
+        const int GIRI1 = 500;
+        const int GIRI2 = 1000;
         int _counter = 0;
         static readonly object _locker = new object();
+
+        CountdownEvent semaforo;
 
         public MainWindow()
         {
@@ -33,17 +36,34 @@ namespace rubinetti.alessandro._4i.wpfThreads
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            btnGo.IsEnabled = false;
+
             Thread thread1 = new Thread(incrementa1);
             thread1.Start();
 
             Thread thread2 = new Thread(incrementa2);
             thread2.Start();
 
+            semaforo = new CountdownEvent(2);
+
+            Thread thread3 = new Thread( () =>
+                {
+                    semaforo.Wait();
+                    Dispatcher.Invoke(() =>
+                        {
+                            lblCounter1.Text = _counter.ToString();
+                            lblCounter2.Text = _counter.ToString();
+                            btnGo.IsEnabled = true;
+                        }
+                    );
+                }
+            );
+            thread3.Start();
         }
 
         private void incrementa1()
         {
-            for (int x = 0; x < GIRI; x++)
+            for (int x = 0; x < GIRI1; x++)
             {
                 lock (_locker)
                 {
@@ -66,7 +86,7 @@ namespace rubinetti.alessandro._4i.wpfThreads
 
         private void incrementa2()
         {
-            for (int x = 0; x < GIRI; x++)
+            for (int x = 0; x < GIRI2; x++)
             {
                 lock (_locker)
                 {
