@@ -232,3 +232,12 @@ Dispatcher.Invoke(() => {
 });
 ```
 Il metodo "Invoke" del Dispatcher viene utilizzato per eseguire un'azione su un thread dell'interfaccia utente. Il Dispatcher è un oggetto che gestisce la coda di elaborazione dei thread dell'interfaccia utente in un'applicazione WPF, garantisce inoltre che tutti gli accessi ai controlli dell'interfaccia utente avvengano su un singolo thread così da evitare problemi di sincronizzazione e di accesso concorrente. Il metodo "Invoke" del Dispatcher viene chiamato sul Dispatcher corrente e richiede un oggetto come parametro che deve essere eseguita sul thread dell'interfaccia utente.
+
+Inizio:
+![result](https://github.com/AleRubi/WPFThreads/blob/main/Img/Inizio.png?raw=true)
+
+Esecuzione in corso:
+![result](https://github.com/AleRubi/WPFThreads/blob/main/Img/Intermezzo.png?raw=true)
+
+Fine:
+![result](https://github.com/AleRubi/WPFThreads/blob/main/Img/Fine.png?raw=true)
